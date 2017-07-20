@@ -1,0 +1,52 @@
+.login-card {
+  padding: 12px;
+  width: 300px; }
+  .login-card form {
+    background: white;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  .login-card form > * {
+    display: block; }
+  .login-card label {
+    margin-top: 16px;
+    margin-bottom: 12px; }
+  .login-card label:first-child {
+    margin-top: 0; }
+  .login-card input {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+  .login-card input[type=checkbox] {
+    width: auto; }
+  .login-card h2 {
+    text-align: center;
+    font-weight: normal;
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-bottom: 12px; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  height: 100%;
+  font-family: Tahoma; }
+
+input[type=text], input[type=password], textarea, input[type=submit] {
+  padding: 4px; }
+
+.blank {
+  background: #E8E8E8; }
+
+.center-full {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }

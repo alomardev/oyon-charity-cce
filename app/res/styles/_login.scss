@@ -1,0 +1,39 @@
+.login-card {
+	padding: $grid3;
+	width: 300px;
+	form {
+		background: white;
+		padding: $grid3;
+		border: 1px solid rgba(0, 0, 0, .2);
+	}
+
+	form > * {
+		display: block;
+	}
+
+	label {
+		margin-top: $grid4;
+		margin-bottom: $grid3;
+	}
+
+	label:first-child {
+		margin-top: 0;
+	}
+
+	input {
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	input[type=checkbox] {
+		width: auto;
+	}
+
+	h2 {
+		text-align: center;
+		font-weight: normal;
+		margin-left: $grid3;
+		margin-right: $grid3;
+		margin-bottom: $grid3;
+	}
+}
