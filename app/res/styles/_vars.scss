@@ -1,15 +1,29 @@
-$grid1: 4px;
-$grid2: 8px;
-$grid3: 12px;
-$grid4: 16px;
-$grid5: 20px;
-$grid6: 24px;
-$grid7: 28px;
-$grid8: 32px;
-$grid9: 36px;
-$grid10: 40px;
-$grid11: 44px;
-$grid12: 48px;
+/* dimen */
 
-$background-blank-color: #E8E8E8;
-$accent-color: #1DAC53;
+$radius-small: 6px;
+$radius: 12px;
+$radius-large: 24px;
+
+$space-smaller: 6px;
+$space-small: 12px;
+$space: 18px;
+$space-large: 24px;
+$space-larger: 30px;
+
+/* color */
+
+$background-dark: #414141;
+$background-light: #D0D0D0;
+$background-card: #F2F2F2;
+
+$accent-normal: #AEFF00;
+$accent-light: lighten($accent-normal, 18%);
+$accent-lighter: lighten($accent-normal, 32%);
+$accent-dark: darken($accent-normal, 18%);
+$accent-darker: darken($accent-normal, 32%);
+
+$text-primary-light: #525252;
+$text-secondary-light: #9B9B9B;
+
+$text-primary-dark: #FFFFFF;
+$text-secondary-dark: #D8D8D8;

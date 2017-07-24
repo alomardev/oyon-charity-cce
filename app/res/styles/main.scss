@@ -1,28 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo');
 @import 'vars';
 @import 'mixins';
-@import 'login';
-
-* {
-	margin: 0;
-	padding: 0;
-}
-
-html, body {
-	height: 100%;
-	font-family: Tahoma;
-}
-
-input[type=text], input[type=password], textarea, input[type=submit] {
-	padding: $grid1;
-}
-
-.blank {
-	background: $background-blank-color;
-}
-
-.center-full {
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+@import 'global';
