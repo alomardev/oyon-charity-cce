@@ -16,11 +16,11 @@ $background-dark: #414141;
 $background-light: #D0D0D0;
 $background-card: #F2F2F2;
 
-$accent-normal: #AEFF00;
-$accent-light: lighten($accent-normal, 18%);
-$accent-lighter: lighten($accent-normal, 32%);
-$accent-dark: darken($accent-normal, 18%);
-$accent-darker: darken($accent-normal, 32%);
+$accent-normal: #B0EA36;
+$accent-light: saturate(lighten($accent-normal, 18%), 25%);
+$accent-lighter: saturate(lighten($accent-normal, 30%), 20%);
+$accent-dark: saturate(darken($accent-normal, 18%), 25%);
+$accent-darker: saturate(darken($accent-normal, 35%), 20%);
 
 $text-primary-light: #525252;
 $text-secondary-light: #9B9B9B;
