@@ -1,5 +1,6 @@
 /* dimen */
 
+
 $radius-small: 6px;
 $radius: 12px;
 $radius-large: 24px;
@@ -11,6 +12,15 @@ $space-large: 24px;
 $space-larger: 30px;
 
 /* color */
+
+$highlight-color: #00AEFF;
+$highlight: transparentize($highlight-color, .3);
+$highlight-weak: transparentize($highlight-color, .5);
+$highlight-strong: transparentize($highlight-color, 0);
+
+$shadow: rgba(0, 0, 0, .2);
+$shadow-weak: rgba(0, 0, 0, .1);
+$shadow-strong: rgba(0, 0, 0, .4);
 
 $background-dark: #414141;
 $background-light: #D0D0D0;

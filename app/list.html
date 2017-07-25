@@ -1,0 +1,38 @@
+@@include("_top.html", {"title": "Homepage"})
+<!-- body open -->
+@@include("_header.html", {
+	"labels": ["الخطابات", "إنشاء جديد"],
+	"links": ["#", "#"]
+})
+
+<section id='list-section'>
+	<div class='container'>
+		<h2>قائمة الخطابات</h2>
+		<div class='card'>
+			<div id='list-toolbar'>
+				<input type='text' class='et' placeholder='البحث'>
+				<div class='btn-group'>
+					<button>الكل</button>
+					<button>المنئأة</button>
+					<button>المستلمة</button>
+				</div>
+				<div class='btn-group'>
+					<button>منتهية</button>
+					<button>قائمة</button>
+				</div>
+			</div>
+			<div id='list-content'>
+				<div class='list-item'><p>عنوان الخطاب</p><p>2017-07-25</p><div class='icon-24 ic-twitter'></div></div>
+				<div class='list-item'><p>عنوان الخطاب</p><p>2017-07-25</p><div class='icon-24 ic-twitter'></div></div>
+				<div class='list-item'><p>عنوان الخطاب</p><p>2017-07-25</p><div class='icon-24 ic-twitter'></div></div>
+				<div class='list-item'><p>عنوان الخطاب</p><p>2017-07-25</p><div class='icon-24 ic-twitter'></div></div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@@include("_footer.html")
+<!-- body close -->
+@@include("_bottom.html", {
+	"scripts": ["./res/jquery.js","./res/main.js"]
+})

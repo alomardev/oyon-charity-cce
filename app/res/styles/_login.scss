@@ -1,0 +1,36 @@
+#login-section {
+	.container {
+		min-width: 350px;
+		> h2 {
+			text-align: center;
+		}
+	}
+
+	form {
+		label, input[type=text], input[type=password] {
+			display: block;
+		}
+		table {
+			width: 100%;
+			td {
+				input[type=text], input[type=password] {
+					width: 100%;
+				}
+			}
+			label {
+				margin-top: $space-smaller;
+			}
+			tr:first-child {
+				label {
+					margin-top: 0;
+				}
+			}
+			tr:last-child {
+				text-align: left;
+				button {
+					margin-top: $space-small;
+				}
+			}
+		}
+	}
+}

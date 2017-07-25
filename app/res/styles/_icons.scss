@@ -12,3 +12,18 @@
 		background-position: -96px 0;
 	}
 }
+
+.icon-24 {
+	width: 24px;
+	height: 24px;
+	background-image: url(icons-28.svg);
+	&.ic-twitter {
+		background-position: 0 0;
+	}
+	&.ic-facebook {
+		background-position: -28px 0;
+	}
+	&.ic-instagram {
+		background-position: -48px 0;
+	}
+}

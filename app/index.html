@@ -1,39 +1,19 @@
 @@include("_top.html", {"title": "Homepage"})
 <!-- body open -->
-
-<header>
-<div class='container'>
-	<div id='header-logo'><h1>تواصل اللجان</h1></div>
-	<nav>
-	<ul class='inline-list right'>
-		<li><a href='#'>الخطابات</a></li>
-		<li><a href='#'>إنشاء خطاب جديد</a></li>
-	</ul>
-	</nav>
-	<button class='btn dark'>تسجيل الدخول</button>
-</div>
-</header>
+@@include("_header.html", {
+	"labels": ["الخطابات", "إنشاء جديد"],
+	"links": ["#", "#"]
+})
 
 <section>
+	<div class='container'>
+		<h2>عنوان</h2>
+		<div class='card'>
+		</div>
+	</div>
 </section>
 
-<footer>
-<div class='container'>
-	<div id='copyrights'>
-		<p>جميع الحقوق محفوظة &copy; جمعية العيون الخيرية، ٢٠١٧</p>
-	</div>
-	<ul id='quick-links' class='inline-list right'>
-		<li><a href='#'>عن الموقع</a></li>
-		<li><a href='#'>تواصل معنا</a></li>
-	</ul>
-	<ul id='social-links' class='inline-list left'>
-		<li><a href='#' class='icon-block'><div class='icon-48 ic-twitter'></div></a></li>
-		<li><a href='#' class='icon-block'><div class='icon-48 ic-facebook'></div></a></li>
-		<li><a href='#' class='icon-block'><div class='icon-48 ic-instagram'></div></a></li>
-	</ul>
-</div>
-</footer>
-
+@@include("_footer.html")
 <!-- body close -->
 @@include("_bottom.html", {
 	"scripts": ["./res/jquery.js","./res/main.js"]

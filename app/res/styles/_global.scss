@@ -5,7 +5,13 @@
 	font-family: 'Cairo';
 	&:focus {
 		outline: 0;
+		text-shadow: 0 0 $radius $highlight-strong;
 	}
+}
+
+input:focus, button:focus, textarea:focus, select:focus {
+	text-shadow: none;
+	box-shadow: 0 0 $radius $highlight-weak, 0 0 $radius $highlight-weak, 0 0 $radius $highlight-weak;
 }
 
 html {
@@ -23,6 +29,15 @@ section {
 	flex: 1 0 auto;
 	background: $background-light;
 	color: $text-primary-light;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	.container > h2 {
+		padding-left: $radius;
+		padding-right: $radius;
+	}
 }
 
 a {
@@ -36,12 +51,11 @@ a {
 header, footer {
 	background: $background-dark;
 	color: $text-primary-dark;
-
-	.container {
-		display: flex;
-		flex-direction: row;
+	> .container {
 		justify-content: flex-start;
 		align-items: center;
+		display: flex;
+		flex-direction: row;
 	}
 }
 
@@ -64,6 +78,16 @@ footer {
 		flex: 1 0 auto;
 	}
 
+	#copyrights p {
+		line-height: 1.4em;
+	}
+
+	img {
+		width: 100px;
+		height: 83px;
+		margin-left: $space;
+	}
+
 	a {
 		color: $text-secondary-dark;
 	}
@@ -77,17 +101,19 @@ footer {
 
 ul.inline-list {
 	list-style: none;
-
 	li {
 		float: right;
 		display: block;
 		padding-left: $space;
+
 		&:last-child {
 			padding-left: 0;
 		}
 	}
 
 	&::after {
+		content: '';
+		display: block;
 		clear: both;
 	}
 }
@@ -101,10 +127,28 @@ ul.inline-list {
 	background: $accent-normal;
 	&:hover {
 		background: $accent-dark;
-		color: $accent-light;
+		color: white;
 		&.dark {
 			background: $accent-light;
 			color: $accent-darker;
 		}
 	}
+
+	&.light {
+		border: solid 2px $accent-dark;
+	}
+}
+
+.card {
+	border-radius: $radius;
+	background: $background-card;
+	padding: $space;
+	border: solid 1px $shadow-strong;
+}
+
+.et {
+	padding: $space-smaller;
+	border-radius: $radius-small;
+	border: solid 1px $shadow-strong;
+	box-shadow: inset 0px 2px 2px $shadow-weak;
 }
