@@ -100,7 +100,7 @@ footer {
 .charity-logo-small {
 	width: 0.05 * 1000px;
 	height: 0.05 * 854px;
-	background-image: url(charity-logo-outlined.png);
+	background-image: url(charity-logo.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 }
@@ -109,6 +109,10 @@ footer {
 	margin: 0 auto;
 	max-width: 900px;
 	padding: $space;
+
+	h2 {
+		text-align: center;
+	}
 }
 
 

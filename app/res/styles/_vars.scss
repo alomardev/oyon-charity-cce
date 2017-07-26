@@ -14,7 +14,7 @@ $space-larger: 30px;
 /* color */
 
 $highlight-color: #00AEFF;
-$highlight: transparentize($highlight-color, .3);
+$highlight: transparentize($highlight-color, .4);
 $highlight-weak: transparentize($highlight-color, .5);
 $highlight-strong: transparentize($highlight-color, 0);
 
@@ -26,10 +26,10 @@ $background-dark: #414141;
 $background-light: #D0D0D0;
 $background-card: #F2F2F2;
 
-$accent-normal: #B0EA36;
+$accent-normal: #99CD56;
 $accent-light: saturate(lighten($accent-normal, 18%), 25%);
 $accent-lighter: saturate(lighten($accent-normal, 30%), 20%);
-$accent-dark: saturate(darken($accent-normal, 18%), 25%);
+$accent-dark: saturate(darken($accent-normal, 18%), 10%);
 $accent-darker: saturate(darken($accent-normal, 35%), 20%);
 
 $text-primary-light: #525252;
