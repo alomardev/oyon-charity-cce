@@ -8,7 +8,7 @@ input, select, textarea, button {
 	cursor: pointer;
 	border-radius: $radius-small;
 	border: solid 2px $accent-dark;
-	padding: $space-smaller - 1px $space - 1px;
+	padding: $space-smaller - 4px $space-small - 2px;
 	color: $accent-darker;
 	background: $accent-normal;
 	&:hover {
@@ -27,17 +27,24 @@ input, select, textarea, button {
 }
 
 .et {
-	padding: $space-smaller;
+	padding: $space-smaller / 2 $space-smaller;
 	border-radius: $radius-small;
 	border: solid 1px $shadow-strong;
 	box-shadow: inset 0px 2px 2px $shadow-weak;
 	&:focus {
 		border-color: darken($highlight-strong, 10%);
+		&[readonly] {
+			box-shadow: inset 0px 2px 2px $shadow-weak;
+		}
 	}
+	&[readonly] {
+		background: $background-card;
+	}
+
 }
 
 .btn-group {
-	button {
+	.btn-group-item {
 		@extend .btn;
 
 		float: right;

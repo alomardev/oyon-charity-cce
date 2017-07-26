@@ -1,39 +1,48 @@
-@mixin pos($size, $index) {
-	background-position: $size * $index * -1px 0;
+@mixin icon($row, $col) {
+	background-image: url(icons.svg);
+	@if $row == 0 {
+		width: 40px;
+		height: 40px;
+		background-position: 40 * $col * -1px 0;
+	} @else if $row == 1 {
+		width: 32px;
+		height: 32px;
+		background-position: 32 * $col * -1px -40px;
+	} @else if $row == 2 {
+		width: 24px;
+		height: 24px;
+		background-position: 24 * $col * -1px -72px;
+	} @else if $row == 3 {
+		width: 16px;
+		height: 16px;
+		background-position: 16 * $col * -1px -96px;
+	}
 }
 
-.icon-48 {
-	width: 36px;
-	height: 36px;
-	background-image: url(icons-48.svg);
-	&.ic-twitter {
-		@include pos(0, 36);
-	}
-	&.ic-facebook {
-		@include pos(1, 36);
-	}
-	&.ic-instagram {
-		@include pos(2, 36);
-	}
-	&.ic-star {
-		@include pos(3, 36);
-	}
+.icon-twitter {
+	@include icon(1, 0);
 }
 
-.icon-24 {
-	width: 24px;
-	height: 24px;
-	background-image: url(icons-24.svg);
-	&.ic-twitter {
-		@include pos(0, 24);
-	}
-	&.ic-facebook {
-		@include pos(1, 24);
-	}
-	&.ic-instagram {
-		@include pos(2, 24);
-	}
-	&.ic-star {
-		@include pos(3, 24);
-	}
+.icon-facebook {
+	@include icon(1, 1);
+}
+
+.icon-instagram {
+	@include icon(1, 2);
+}
+
+.icon-add {
+	@include icon(2, 0);
+}
+
+.icon-remove {
+	@include icon(2, 1);
+}
+
+.icon-mention {
+	@include icon(3, 0);
+}
+
+.icon-next {
+	@include icon(2, 2);
 }

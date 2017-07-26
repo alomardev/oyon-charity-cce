@@ -1,6 +1,6 @@
 #login-section {
 	.container {
-		min-width: 350px;
+		width: 350px;
 	}
 
 	form {
@@ -23,9 +23,14 @@
 				}
 			}
 			tr:last-child {
-				text-align: left;
 				button {
+					display: block;
+					float: left;
 					margin-top: $space-small;
+				}
+
+				&::after {
+					@include clearfix;
 				}
 			}
 		}

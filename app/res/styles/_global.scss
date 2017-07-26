@@ -28,9 +28,12 @@ section {
 	flex-direction: row;
 	align-items: center;
 
-	.container > h2 {
-		padding-left: $radius;
-		padding-right: $radius;
+	.container {
+		width: $content-width-max;
+		> h2 {
+			padding-left: $radius;
+			padding-right: $radius;
+		}
 	}
 }
 
@@ -109,7 +112,6 @@ footer {
 	margin: 0 auto;
 	max-width: 900px;
 	padding: $space;
-
 	h2 {
 		text-align: center;
 	}
@@ -139,6 +141,31 @@ ul.inline-list {
 .card {
 	border-radius: $radius;
 	background: $background-card;
-	padding: $space;
 	border: solid 1px $shadow-strong;
+	.card-section {
+		border-bottom: solid 1px $shadow-strong;
+		padding: $space-small;
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+	.card-list {
+		&:last-child {
+			margin-bottom: $space-smaller + $radius;
+		}
+		&:first-child {
+			margin-top: $space-smaller + $radius;
+			border-top: solid 1px $shadow-strong;
+		}
+		.card-list-item {
+			cursor: pointer;
+			padding: $space-smaller $space-small;
+			border-bottom: solid 1px $shadow-strong;
+			transition-property: background-color;
+			transition-duration: 150ms;
+			&:hover {
+				background-color: white;
+			}
+		}
+	}
 }
