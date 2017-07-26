@@ -1,6 +1,58 @@
 #list-section {
 	align-items: flex-start;
+	flex-direction: column;
 	.container {
-		width: 600px;
+		flex: 1 0 auto;
+		width: 700px;
+		display: flex;
+		flex-direction: column;
+		min-height: 500px;
+	}
+	.card {
+		flex: 1 0 auto;
+		padding: 0;
+		margin-bottom: $space;
+	}
+}
+
+#list-toolbar {
+	border-bottom: solid 1px $shadow-strong;
+	padding: $space-small;
+	
+	display: flex;
+	flex-direction: row;
+
+	input[type=text] {
+		flex: 1 0 auto;
+		margin-left: $space-small;
+	}
+	.btn-group {
+		margin-left: $space-small;
+		&:last-child {
+			margin-left: 0;
+		}
+	}
+}
+
+#list-content {
+	padding-bottom: $space;
+	.list-item {
+		cursor: pointer;
+		padding: $space-smaller $space-small;
+		border-bottom: solid 1px $shadow-strong;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		p:last-child {
+			flex: 1 0 auto;
+			text-align: left;
+		}
+
+		transition-property: background-color;
+		transition-duration: 150ms;
+		&:hover {
+			background-color: white;
+		}
 	}
 }

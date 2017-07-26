@@ -5,13 +5,7 @@
 	font-family: 'Cairo';
 	&:focus {
 		outline: 0;
-		text-shadow: 0 0 $radius $highlight-strong;
 	}
-}
-
-input:focus, button:focus, textarea:focus, select:focus {
-	text-shadow: none;
-	box-shadow: 0 0 $radius $highlight-weak, 0 0 $radius $highlight-weak, 0 0 $radius $highlight-weak;
 }
 
 html {
@@ -46,6 +40,10 @@ a {
 	&:hover {
 		color: $accent-normal;
 	}
+
+	&:focus {
+		text-shadow: 0 0 $radius $highlight-strong;
+	}
 }
 
 header, footer {
@@ -74,17 +72,23 @@ footer {
 	box-shadow: inset 0 2px 0 $background-dark, inset 0 4px 0 $accent-light;
 	
 	#quick-links {
-		margin-right: $space-larger;
+		margin-left: $space;
+	}
+	#copyrights {
 		flex: 1 0 auto;
+		p {
+			line-height: 1.4em;
+		}
 	}
 
-	#copyrights p {
-		line-height: 1.4em;
+	#social-links {
+		li {
+			padding-right: $space-smaller;
+			padding-left: 0;
+		}
 	}
 
-	img {
-		width: 100px;
-		height: 83px;
+	.charity-logo-small {
 		margin-left: $space;
 	}
 
@@ -93,11 +97,21 @@ footer {
 	}
 }
 
+.charity-logo-small {
+	width: 0.05 * 1000px;
+	height: 0.05 * 854px;
+	background-image: url(charity-logo-outlined.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
 .container {
 	margin: 0 auto;
 	max-width: 900px;
 	padding: $space;
 }
+
+
 
 ul.inline-list {
 	list-style: none;
@@ -118,37 +132,9 @@ ul.inline-list {
 	}
 }
 
-.btn {
-	cursor: pointer;
-	border-radius: $radius-small;
-	border: 0;
-	padding: $space-smaller $space;
-	color: $accent-darker;
-	background: $accent-normal;
-	&:hover {
-		background: $accent-dark;
-		color: white;
-		&.dark {
-			background: $accent-light;
-			color: $accent-darker;
-		}
-	}
-
-	&.light {
-		border: solid 2px $accent-dark;
-	}
-}
-
 .card {
 	border-radius: $radius;
 	background: $background-card;
 	padding: $space;
 	border: solid 1px $shadow-strong;
-}
-
-.et {
-	padding: $space-smaller;
-	border-radius: $radius-small;
-	border: solid 1px $shadow-strong;
-	box-shadow: inset 0px 2px 2px $shadow-weak;
 }

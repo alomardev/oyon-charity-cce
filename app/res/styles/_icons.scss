@@ -1,29 +1,39 @@
+@mixin pos($size, $index) {
+	background-position: $size * $index * -1px 0;
+}
+
 .icon-48 {
-	width: 48px;
-	height: 48px;
+	width: 36px;
+	height: 36px;
 	background-image: url(icons-48.svg);
 	&.ic-twitter {
-		background-position: 0 0;
+		@include pos(0, 36);
 	}
 	&.ic-facebook {
-		background-position: -48px 0;
+		@include pos(1, 36);
 	}
 	&.ic-instagram {
-		background-position: -96px 0;
+		@include pos(2, 36);
+	}
+	&.ic-star {
+		@include pos(3, 36);
 	}
 }
 
 .icon-24 {
 	width: 24px;
 	height: 24px;
-	background-image: url(icons-28.svg);
+	background-image: url(icons-24.svg);
 	&.ic-twitter {
-		background-position: 0 0;
+		@include pos(0, 24);
 	}
 	&.ic-facebook {
-		background-position: -28px 0;
+		@include pos(1, 24);
 	}
 	&.ic-instagram {
-		background-position: -48px 0;
+		@include pos(2, 24);
+	}
+	&.ic-star {
+		@include pos(3, 24);
 	}
 }
